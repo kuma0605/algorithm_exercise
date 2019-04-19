@@ -17,7 +17,7 @@ class BubbleSort extends Component {
   }
 
   handleSubmit(event){
-    this.setState({sorted: bubbleSort(this.state.value.split(" "))})
+    this.setState({sorted: bubbleSort(this.state.value.trim().split(" "))})
     event.preventDefault();
   }
 
