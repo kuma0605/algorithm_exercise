@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import bubbleSort from '../algorithmExe/bubbleSort.js';
+import pickSort from '../algorithmExe/pickSort.js';
 class BubbleSort extends Component {
   constructor(){
     super();
@@ -16,14 +16,14 @@ class BubbleSort extends Component {
   }
 
   handleSubmit(event){
-    this.setState({sorted: bubbleSort(this.state.value.trim().split(" "))})
+    this.setState({sorted: pickSort(this.state.value.trim().split(" "))})
     event.preventDefault();
   }
 
   render(){
     return (
       <div>
-        <div>bubble sort</div>
+        <div>pick sort</div>
         <form onSubmit={this.handleSubmit}>
           <label>
             <textarea value={this.state.value} onChange={this.handleChange}></textarea>
